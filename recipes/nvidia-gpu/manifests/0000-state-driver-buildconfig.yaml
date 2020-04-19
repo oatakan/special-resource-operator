@@ -26,8 +26,8 @@ spec:
   source:
     git:
       ref: master
-      uri: https://gitlab.com/zvonkok/driver.git
-    contextDir: {{.OperatingSystem}}
+      uri: https://github.com/oatakan/openshift-ansible-device-plugin-nvidia.git
+    contextDir: nvidia/{{.OperatingSystem}}
     type: Git
   strategy:
     dockerStrategy:
