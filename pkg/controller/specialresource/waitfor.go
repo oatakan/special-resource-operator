@@ -252,7 +252,7 @@ func waitForDaemonSetLogs(obj *unstructured.Unstructured, r *ReconcileSpecialRes
 		log.Info("waitForDaemonSetLogs", "LastBytes", lastBytes)
         pattern := "\\+ wait \\d+|\\+ sleep infinity"
 		if match, _ := regexp.MatchString(pattern, lastBytes); !match {
-			return errors.New("Not yet done. Not matched against \\+ wait \\d+|\\+ sleep infinity ")
+			return errs.New("Not yet done. Not matched against \\+ wait \\d+|\\+ sleep infinity ")
 		}
 		// We're only checking one Pod not all of them
 		break
